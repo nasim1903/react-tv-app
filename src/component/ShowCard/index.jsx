@@ -1,15 +1,12 @@
 import React from "react";
 
-const showCard = ({data}) => {
+const showCard = ({ data }) => {
 
     return <div className="show-card">
-    <form>
-        <input type="text" />
-        <input type="submit" />
-    </form>
-
-    <h2>{data.name}</h2>
-</div>
+        <img src={data["image"] ? data["image"]["medium"] : ""} />
+        <h2>{data.name}</h2>
+        <p>{data.summary}</p>
+    </div>
 
 }
 
